@@ -18,7 +18,6 @@ curl -H "Content-type: multipart/form-data" \
      -F server_storage_quota_mb="$(df --output=size -h -BM / | grep -v 1M-blocks)" \
      -F server_status_code="$()" \
      -F server_status_note="$(echo $SERVER_STATUS_NOTE)" \
-     -F server_internal_note="$()" \
      -F server_daemon_version="V 0.1" \
      -F server_last_deamon_update="$()" \
      -F server_last_deamon_update_check="$()" \
