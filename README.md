@@ -13,3 +13,10 @@ source ~/.bashrc
 
 
 ```
+
+Then add following to the cronjob after making the script executable!
+```shell
+*/10 * * * * /bin/bash -c "/<YOUR PATH>/report-daemon.sh"
+```
+
+and then reload cron!
