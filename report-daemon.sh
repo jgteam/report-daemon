@@ -1,5 +1,14 @@
 #!/bin/bash
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+export REPORT_SERVER_URL="http://<SERVERHOST>/api/reportme"
+export REPORT_SERVER_TOKEN="<TOKEN>"
+export SERVER_FRONTEND_URL="http://your.domain"
+export SERVER_MYSQL_USER="bps"
+export SERVER_MYSQL_DATABASE="bps_db"
+export SERVER_STATUS_NOTE="dev-server"
+
+echo "Reporting to URL: $REPORT_SERVER_URL"
+
 curl -H "Content-type: multipart/form-data" \
      -F server_access_token="$(echo $REPORT_SERVER_TOKEN)" \
      -F server_hostname="$(hostname)" \
