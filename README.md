@@ -19,7 +19,7 @@ Then add following to the cronjob after making the script executable!
 
 sudo nano /etc/crontab
 
-*/1 * * * * root /<YOUR PATH>/report-daemon/report-daemon.sh >> /var/log/report-daemon.log 2>&1
+*/1 * * * * root /<YOUR PATH>/report-daemon/report-daemon.sh > /var/log/report-daemon.log 2>&1
 
 service cron reload
 ```
