@@ -1,4 +1,5 @@
 #!/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 curl -H "Content-type: multipart/form-data" \
      -F server_access_token="$(echo $REPORT_SERVER_TOKEN)" \
      -F server_hostname="$(hostname)" \
