@@ -35,5 +35,6 @@ curl -H "Content-type: multipart/form-data" \
      -F server_backup_url="$()" \
      -F server_backup_htaccess_user="$()" \
      -F server_backup_htaccess_password="$()" \
+     -F server_uptime="$(uptime)" \
      -X POST \
      $(echo $REPORT_SERVER_URL)
