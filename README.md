@@ -25,3 +25,14 @@ service cron reload
 ```
 
 and then reload cron!
+
+
+# Backup Setup 
+
+https://code.fbi.h-da.de/stjaguens/fastda-server-setup
+
+You need to set the backup parameters e.g. with curl like this:
+
+```shell
+curl -H "Content-type: multipart/form-data" -F server_access_token="[TOKEN HERE]" -F server_backup_url="[URL]" -F server_backup_htaccess_user="[USERNAME]" -F server_backup_htaccess_password="[PASSWORD]" -X POST https://backup.fastda.users.h-da.cloud/api/setupbackup.php
+```
